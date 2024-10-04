@@ -7,10 +7,10 @@ import VideoCard2 from "./VideoCard2";
 
 const SearchVideoContainer = () => {
   const { query } = useParams();
-  console.log(query);
+  // console.log(query);
 
   const [videos, setVideo] = useState([]);
-  console.log(videos);
+  // console.log(videos);
 
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
