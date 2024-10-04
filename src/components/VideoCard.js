@@ -24,13 +24,15 @@ const VideoCard = ({ info }) => {
     <div
       className={`p-2 m-2 ${
         isMenuOpen ? "w-72" : "w-[300px]"
-      } shadow-lg rounded-lg h-[290px]`}
+      } shadow-lg rounded-lg h-[260px] transition-transform duration-300 ease-in-out hover:scale-105`}
     >
       <img className="rounded-lg" alt="thumbnail" src={thumbnails.medium.url} />
       <ul>
-        <li className="font-bold py-1">{title.split("|")[0].trim()}</li>
-        <li>{channelTitle}</li>
-        <li>{formattedNumber} views</li>
+        <li className="font-bold text-base pt-1 truncate">
+          {title.split("|")[0].trim()}
+        </li>
+        <li className="pt-[2px]">{channelTitle}</li>
+        <li className="pt-[3px]">{formattedNumber} views</li>
       </ul>
     </div>
   );
