@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { closeMenu } from "../utils/appSlice";
+import { closeMenu, openMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
 import LiveChat from "./LiveChat";
@@ -14,6 +14,10 @@ const WatchPage = () => {
 
   useEffect(() => {
     dispatch(closeMenu());
+
+    return () => {
+      dispatch(openMenu());
+    };
   }, [isMenuOpen]);
 
   return (
